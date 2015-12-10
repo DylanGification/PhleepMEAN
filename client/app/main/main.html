@@ -1,0 +1,131 @@
+<div ng-include="'components/shell/shell.html'"></div>
+
+<div layout="column">
+  <div flex>
+    <h2 class="md-toolbar-tools">
+      <span>Categories</span>
+    </h2>
+  </div>
+</div>
+
+<md-content flex layout-padding layout="row">
+  <div flex layout="row">
+
+    <!-- Home section -->
+    <div flex>
+      <md-card>
+        <md-card-title>
+          <md-card-title-text>
+            <span layout-align="center" class="md-headline">Home</span>
+          </md-card-title-text>
+        </md-card-title>
+        <md-content>          
+          <md-input-container>
+            <label>Home Name</label>
+            <input ng-model="newHomeName">
+          </md-input-container>
+          <md-input-container>
+            <label>Home Info</label>
+            <input ng-model="newHomeInfo">
+          </md-input-container>
+          <md-input-container>
+            <md-button class="md-primary" ng-click="addHomeThing()">Add New</md-button>
+          </md-input-container>
+        </md-content>
+        <div layout='column'>
+          <md-content layout-padding layout-gt-sm="row">
+            <md-list flex>
+               <md-list-item style="border-top: 1px solid #CCC;" class="md-3-line" ng-repeat="home in homeThings | orderBy:'name'">
+                <div class="md-list-item-text">
+                  <h3><b>Name:</b> {{ home.name }}</h3>
+                  <h4><b>Info:</b> {{ home.info }}</h4>
+                </div>
+                <md-button style="margin-top: 20px;" ng-click="deleteHomeThing(home)">Delete</md-button>
+                <md-divider ng-if="!$last"></md-divider>
+              </md-list-item>
+            </md-list>
+          </md-content>
+        </div>
+      </md-card>
+    </div>    
+    <!-- /Home section -->
+
+    <!-- Personal section -->
+    <div flex>
+      <md-card>
+        <md-card-title>
+          <md-card-title-text>
+            <span layout-align="center" class="md-headline">Personal</span>
+          </md-card-title-text>
+        </md-card-title>
+        <md-content>          
+          <md-input-container>
+            <label>Personal Name</label>
+            <input ng-model="newPersonalName">
+          </md-input-container>
+          <md-input-container>
+            <label>Personal Info</label>
+            <input ng-model="newPersonalInfo">
+          </md-input-container>
+          <md-input-container>
+            <md-button class="md-primary" ng-click="addPersonalThing()">Add New</md-button>
+          </md-input-container>
+        </md-content>
+        <div layout='column'>
+          <md-content layout-padding layout-gt-sm="row">
+            <md-list flex>
+               <md-list-item style="border-top: 1px solid #CCC;" class="md-3-line" ng-repeat="personal in personalThings | orderBy:'name'">
+                <div class="md-list-item-text">
+                  <h3><b>Name:</b> {{ personal.name }}</h3>
+                  <h4><b>Info:</b> {{ personal.info }}</h4>
+                </div>
+                <md-button style="margin-top: 20px;" ng-click="deletePersonalThing(personal)">Delete</md-button>
+                <md-divider ng-if="!$last"></md-divider>
+              </md-list-item>
+            </md-list>
+          </md-content>
+        </div>
+      </md-card>
+    </div>    
+    <!-- /Personal section -->
+
+    <!-- Work section -->
+    <div flex>
+      <md-card>
+        <md-card-title>
+          <md-card-title-text>
+            <span layout-align="center" class="md-headline">Work</span>
+          </md-card-title-text>
+        </md-card-title>
+        <md-content>          
+          <md-input-container>
+            <label>Work Name</label>
+            <input ng-model="newWorkName">
+          </md-input-container>
+          <md-input-container>
+            <label>Work Info</label>
+            <input ng-model="newWorkInfo">
+          </md-input-container>
+          <md-input-container>
+            <md-button class="md-primary" ng-click="addWorkThing()">Add New</md-button>
+          </md-input-container>
+        </md-content>
+        <div layout='column'>
+          <md-content layout-padding layout-gt-sm="row">
+            <md-list flex>
+               <md-list-item style="border-top: 1px solid #CCC;" class="md-3-line" ng-repeat="work in workThings | orderBy:'name'">
+                <div class="md-list-item-text">
+                  <h3><b>Name:</b> {{ work.name }}</h3>
+                  <h4><b>Info:</b> {{ work.info }}</h4>
+                </div>
+                <md-button style="margin-top: 20px;" ng-click="deleteWorkThing(work)">Delete</md-button>
+                <md-divider ng-if="!$last"></md-divider>
+              </md-list-item>
+            </md-list>
+          </md-content>
+        </div>
+      </md-card>
+    </div>   
+    <!-- /Work Section -->
+  </div>
+<md-content>

@@ -1,0 +1,28 @@
+.login-card, .register-card {
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.love-message {
+  margin-top: 64px;
+  text-align: center;
+}
+/*
+
+.btn-facebook {
+  color: #fff;
+  background-color: #3B5998;
+  border-color: #133783;
+}
+
+.btn-twitter {
+  color: #fff;
+  background-color: #2daddc;
+  border-color: #0271bf;
+}
+
+.btn-github {
+  color: #fff;
+  background-color: #fafafa;
+  border-color: #ccc;
+}*/
