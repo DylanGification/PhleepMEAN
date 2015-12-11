@@ -45,14 +45,14 @@ var all = {
   },
 
   facebook: {
-    clientID:     process.env.FACEBOOK_ID || 'id',
-    clientSecret: process.env.FACEBOOK_SECRET || 'secret',
+    clientID:     process.env.FACEBOOK_ID || '1641701722762351',
+    clientSecret: process.env.FACEBOOK_SECRET || '550eab505cf265a45be6b98107e67575',
     callbackURL:  (process.env.DOMAIN || '') + '/auth/facebook/callback'
   },
 
   twitter: {
-    clientID:     process.env.TWITTER_ID || 'id',
-    clientSecret: process.env.TWITTER_SECRET || 'secret',
+    clientID:     process.env.TWITTER_ID || '4AsKhYLoo5Vpsc2GlsKurR8hq',
+    clientSecret: process.env.TWITTER_SECRET || 'hlwT38Gf63GCRtXyb55uyiwRyTndIKlgpDdiLu4Vi2l34YhpLo',
     callbackURL:  (process.env.DOMAIN || '') + '/auth/twitter/callback'
   },
 
